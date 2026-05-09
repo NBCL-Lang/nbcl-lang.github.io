@@ -1,0 +1,52 @@
+---
+
+---
+
+<footer class="border-t border-app-text/10">
+  <div class="column">
+    <h4>Documents</h4>
+    <ul>
+      <li><a href="#">Introduction</a></li>
+      <li><a href="#">Benchmarks</a></li>
+      <li><a href="#">Guides</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <h4>Resources</h4>
+    <ul>
+        <li><a href="/playground">Playground</a></li>
+        <li><a href="#">Foo</a></li>
+        <li><a href="#">Baz</a></li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+    footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--bg-color);
+        color: #ccc;
+        padding: 20px;
+    }
+
+    .column { 
+        width: 30%; 
+    }
+
+    ul { 
+        list-style-type: none; 
+        padding: 0; 
+    }
+
+    a:hover { 
+        color: var(--color-accent);
+        text-decoration: underline;
+    }
+
+    h4 {
+        color: white;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+</style>

@@ -1,0 +1,41 @@
+---
+import Card from './Card.astro';
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-fit mx-auto my-16 px-8" id="features">
+  <Card 
+    icon="bolt" 
+    title="Fast and lightweight" 
+    description="Uses only the bare minimum libraries with zero unnecessary overhead" 
+  />
+
+  <Card 
+    icon="puzzle" 
+    title="Embeddable" 
+    description="Integrate into any Rust project or WebAssembly target." 
+  />
+
+  <Card 
+    icon="building" 
+    title="Node-based structure" 
+    description="Hierarchical config trees map cleanly to structured, JSON compatible data." 
+  />
+
+  <Card 
+    icon="shield-check" 
+    title="Type-safe" 
+    description="Catch config errors at parse time, not at runtime when it's too late." 
+  />
+
+  <Card 
+    icon="code" 
+    title="Scripting power" 
+    description="More than just static configs. Logic, expressions, and libraries are built in." 
+  />
+
+  <Card 
+    icon="books" 
+    title="Great diagnostics" 
+    description="Clear, and detailed errors that can be plugged into any diagnostic tool." 
+  />
+</div>

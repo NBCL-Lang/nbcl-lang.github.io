@@ -1,0 +1,61 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+}
+const { icon, title, description } = Astro.props;
+---
+<div class="card">
+  <div class="icon-wrap">
+    <i class={`ti ti-${icon}`}></i>
+  </div>
+  <div>
+    <p class="title">{title}</p>
+    <p class="desc">{description}</p>
+  </div>
+</div>
+
+<style>
+.card {
+  background: color-mix(in srgb, var(--bg-color) 85%, transparent);
+  border: 0.5px solid color-mix(in srgb, var(--text-color) 15%, transparent);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  width: fit-content;
+  min-width: 220px;
+  max-width: 350px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.card:hover {
+  border-color: color-mix(in srgb, var(--text-color) 30%, transparent);
+}
+.icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-wrap i {
+  font-size: 18px;
+  color: var(--color-accent);
+}
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin: 0 0 4px;
+}
+.desc {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--text-color) 60%, transparent);
+  margin: 0;
+  line-height: 1.6;
+}
+</style>

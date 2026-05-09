@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "@tabler/icons-webfont/dist/tabler-icons.min.css";
+
+@theme {
+  --color-app-bg: var(--bg-color);
+  --color-app-text: var(--text-color);
+  --color-accent: #3b82f6;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+}
+
+.dark {
+  --bg-color: #1b1b1d;
+  --text-color: #f9fafb;
+}
+
+.header-logo {
+  filter: invert(100%)
+}
+
+.dark .header-logo {
+  filter: invert(0);
+}
+
+body {
+  background-color: var(--color-app-bg);
+  color: var(--color-app-text);
+  transition: background-color 0.3s, color 0.3s;
+}

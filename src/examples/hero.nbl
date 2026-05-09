@@ -1,0 +1,11 @@
+component Button (label, color?) {
+    Object {
+        text = label
+        bg   = color || "#3b82f6"
+    }
+}
+
+# Use it anywhere
+Button {
+    label = "Click me"
+}
