@@ -5,16 +5,21 @@
   --color-app-bg: var(--bg-color);
   --color-app-text: var(--text-color);
   --color-accent: #3b82f6;
+  --color-muted: var(--text-color-muted);
 }
 
 :root {
   --bg-color: #ffffff;
   --text-color: #111827;
+  --text-color-alt: #333;
+  --text-color-muted: #4b5563;
 }
 
 .dark {
   --bg-color: #1b1b1d;
   --text-color: #f9fafb;
+  --text-color-alt: #ccc;
+  --text-color-muted: #9ca3af;
 }
 
 .header-logo {
