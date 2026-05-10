@@ -3,21 +3,26 @@ import example from '../examples/hero.nbl?raw';
 import { Code } from 'astro:components';
 import nbclGrammar from '../assets/nbcl.tmLanguage.json';
 ---
-<div class="hero-section flex items-center justify-between max-w-6xl mx-auto px-8 min-h-[80vh]">
+
+<div class="hero-section flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto px-6 lg:px-8 py-12 lg:min-h-[80vh] gap-12">
     <!-- Hero text -->
-    <div class="flex flex-col gap-2">
-        <h1 class="text-5xl font-bold tracking-tight">Structured, node-based</h1>
-        <h1 class="text-5xl font-bold tracking-tight">configuration with</h1>
-        <h1 class="text-5xl font-bold tracking-tight text-accent">scripting power.</h1>
-        <p class="text-lg text-muted mt-4 max-w-lg">
+    <div class="flex flex-col gap-2 text-center lg:text-left items-center lg:items-start order-2 lg:order-1">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+            Structured, node-based
+            <span class="block">configuration with</span>
+            <span class="text-accent">scripting power.</span>
+        </h1>
+        
+        <p class="text-base md:text-lg text-muted mt-4 max-w-lg">
             An open source, embeddable configuration language for Rust and the Web
             with scripting capabilities.
         </p>
-        <div class="flex gap-4 mt-8">
-            <a href="/docs" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+            <a href="/docs" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center">
                 Get Started
             </a>
-            <a href="/playground" class="border border-gray-300 dark:border-gray-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+            <a href="/playground" class="border border-gray-300 dark:border-gray-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-center">
                 Playground
                 <i class="ti ti-arrow-right"></i>
             </a>
@@ -25,18 +30,20 @@ import nbclGrammar from '../assets/nbcl.tmLanguage.json';
     </div>
 
     <!-- Code example -->
-    <div class="bg-gray-900 dark:bg-gray-950 rounded-xl p-6 text-sm font-mono text-gray-100 shadow-2xl max-w-md w-full">
+    <div class="bg-gray-900 dark:bg-gray-950 rounded-xl p-4 md:p-6 text-xs md:text-sm font-mono text-gray-100 shadow-2xl max-w-md w-full overflow-hidden hidden lg:block">
         <div class="flex gap-2 mb-4">
             <span class="w-3 h-3 rounded-full bg-red-500"></span>
             <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
             <span class="w-3 h-3 rounded-full bg-green-500"></span>
         </div> 
 
-        <Code 
-            code={example} 
-            lang={nbclGrammar as any}
-            theme="github-dark"
-            style="background: transparent;"
-        />
+        <div class="overflow-x-auto">
+            <Code 
+                code={example} 
+                lang={nbclGrammar as any}
+                theme="github-dark"
+                style="background: transparent;"
+            />
+        </div>
     </div>
 </div>
