@@ -1,5 +1,5 @@
 ---
-import example from '../examples/hero.nbl?raw';
+import example from '../examples/hero.nbcl?raw';
 import { Code } from 'astro:components';
 import nbclGrammar from '../assets/nbcl.tmLanguage.json';
 ---
@@ -12,7 +12,7 @@ import nbclGrammar from '../assets/nbcl.tmLanguage.json';
             <span class="block">configuration with</span>
             <span class="text-accent">scripting power.</span>
         </h1>
-        
+
         <p class="text-base md:text-lg text-muted mt-4 max-w-lg">
             An open source, embeddable configuration language for Rust and the Web
             with scripting capabilities.
@@ -35,11 +35,11 @@ import nbclGrammar from '../assets/nbcl.tmLanguage.json';
             <span class="w-3 h-3 rounded-full bg-red-500"></span>
             <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
             <span class="w-3 h-3 rounded-full bg-green-500"></span>
-        </div> 
+        </div>
 
         <div class="overflow-x-auto">
-            <Code 
-                code={example} 
+            <Code
+                code={example}
                 lang={nbclGrammar as any}
                 theme="github-dark"
                 style="background: transparent;"
